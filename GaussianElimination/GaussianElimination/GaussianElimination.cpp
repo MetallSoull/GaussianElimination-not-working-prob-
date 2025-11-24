@@ -67,6 +67,13 @@ int main() {
 		}
 	}
 
+	cout << "Augmented Matrix:" << endl;
+	for(int i = 0; i < n; ++i) {
+		for(int j = 0; j <= n; ++j) {
+			cout << matrix[i][j] << " ";
+		}
+		cout << endl;
+	}
 	int singular_flag = forwardElimination(matrix, n);
 
 	if(singular_flag != -1) {
@@ -84,4 +91,5 @@ int main() {
 	printSolution(solution, n);
 
 	return 0;
+
 }
